@@ -10,9 +10,9 @@ $dbname = "task-mysql";
 $tablename = "pricelist";
 $truncate_table_query = "TRUNCATE TABLE $tablename";
 
-$mysqli = new mysqli($dbhost, $dblogin, $dbname, $dbname);
+$mysqli = new mysqli($dbhost, $dblogin, $dbpass, $dbname );
 $reader = new SpreadsheetReader('pricelist.xls');
-$conn = new mysqli("$dbhost", "$dblogin", "$dbmame", "$dbname");
+$conn = new mysqli("$dbhost", "$dblogin", "$dbpass", "$dbname");
 
 
 if ($conn->connect_error) 
